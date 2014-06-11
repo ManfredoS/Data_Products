@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\n\n# Define UI for dataset viewer application\nshinyUI(\n  pageWithSidebar(\n    # Application title\n    headerPanel(em(\"Predict your offsprings height\")),\n  \n    sidebarPanel(\n      img(src=\"Band.png\", height = 200, width = 200),\n      numericInput('height', label=h4('Specify your height in inches:'),70.5 , min = 35, max = 90, step = 0.5),\n      br(),\n      selectInput(\"select\", label = h4(\"Select your gender and the expected gender of your offspring:\"), \n                  choices = list(\"male; male (fs)\" = \"fs\", \"male; female (fd)\" = \"fd\",\n                                 \"female; male (ms)\" = \"ms\", \"female; female (md)\" = \"md\"), selected = \"md\"),\n      br(),\n      submitButton('Submit')\n    ),\n    mainPanel(\n      h4(div(\"Lucky you,\", style = \"color:blue\")),\n      h4(div(\"congratulations to the upcomming birth of your beloved offspring!\", style = \"color:blue\")),\n      p(\"In order to give you the possiblity to plan a little ahead (on room heights, cloth sizes, etc.)\n        you have now the possiblity to predict your offsprings adult height!\"),\n      br(),\n            strong(\"Please fill in your specifications like your height in inches (inches=centimeters/2.54), your gender and the expected gender of your offspring\"),\n            strong(\"into the control panel on the left. Push the submit button, in order to obtain the predictions in inches and centimeters.\"),\n      p(\"The output below will supply you with the predicted size of your offspring in inches and centimeters.\"),      \n      img(src=\"Sizes.png\", height = 300, width = 300),\n      p(\"The applied multiple linear regression model is based on the\"),\n      code(\"PearsonLee\"), p(\"data set of the R-package\"),\n      code(\"HistData\"),\n          br(),\n        h4('Your personal inputs:'),\n        verbatimTextOutput(\"inputValue1\"),\n        verbatimTextOutput(\"inputValue2\"),\n      h4('Your specifications resulted in the following prediction of the height of your offspring:'),\n        verbatimTextOutput(\"prediction\")\n    )\n  )\n)\n\n",
+    "created" : 1402412506178.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3668749218",
+    "id" : "22AB9BD7",
+    "lastKnownWriteTime" : 1402514896,
+    "path" : "C:/Users/Manfred1/Data_Products/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

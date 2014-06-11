@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\nlibrary(HistData)\ndata(PearsonLee)\nsummary(lm.fit <- lm(child~parent+gp-1,weight=frequency, data=PearsonLee))\n\nHeight <- function(height,select) predict(lm.fit,data.frame(parent=height,gp=as.factor(select)),type=\"response\")\n\nshinyServer(\n  function(input, output) {\n    output$inputValue1 <- renderPrint({data.frame(Inches=input$height,Centimeters=input$height*2.54)})\n    output$inputValue2 <- renderPrint({input$select})\n    output$prediction <- renderPrint({round(data.frame(Inches=Height(input$height,input$select),\n                                                 Centimeters=Height(input$height,input$select)*2.54),2)})\n  }\n)\n",
+    "created" : 1402412522241.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3466648323",
+    "id" : "25363844",
+    "lastKnownWriteTime" : 1402507893,
+    "path" : "C:/Users/Manfred1/Data_Products/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
