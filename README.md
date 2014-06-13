@@ -25,4 +25,4 @@ your size in inches = your size in centemeters / 2.54
 
 The app is based on a multiple linear regression model using the R "lm" command. Regressors are gender and size in inches, which are the two major explanatory variables within the "PearsonLee" data set.
 
-# Enjoy :-)
+## Happy prediction :-)
