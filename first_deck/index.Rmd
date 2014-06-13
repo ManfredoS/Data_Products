@@ -18,17 +18,16 @@ The app "Height prediction" will allow you to predict the height of your yet unb
 
 The upcoming slides will guide you through the app with the follwing topics: 
 
-1. Data set and prediction model
+1. Data set
 
-2. Use of the shiny app 
+2. Prediction model 
 
-3. Interpretation of the results
+3. Interpretation and use of the shiny app
 
-4. Thanx
 
 --- .class #id 
 
-## Data set and prediction model
+## Data set
 
 The app is based on the following package:
 ```{r,results='hide', message=FALSE, warning=FALSE }
@@ -79,8 +78,8 @@ Interpreting the regression results, we observe gpms (female with male offspring
 
 * In the following you need to specify your gender and the expected gender of your offspring
 
-* Finally press the submit button to obtain the prediction. You´ll find your height and gender specifications on the main panel.
-You can  find the prediction results following your specifications.
+* Finally press the submit button to obtain the height prediction. You´ll find your height (inches and centimeters) and gender specifications on the main panel.
+You can find the prediction ouputs following your specifications.
 
-# Now predict away...
+# Now happy prediction ...
 
