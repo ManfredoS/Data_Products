@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta http-equiv="x-ua-compatible" content="IE=9" >
 
 <title>Data_Products</title>
+
+
+
+
 
 <style type="text/css">
 body, td {
    font-family: sans-serif;
    background-color: white;
-   font-size: 12px;
-   margin: 8px;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  line-height: 20px;
 }
 
 tt, code, pre {
@@ -47,19 +54,21 @@ a:visited {
    color: rgb(50%, 0%, 50%);
 }
 
-pre {	
-   margin-top: 0;
-   max-width: 95%;
-   border: 1px solid #ccc;
-   white-space: pre-wrap;
+pre, img {
+  max-width: 100%;
 }
 
 pre code {
    display: block; padding: 0.5em;
 }
 
-code.r, code.cpp {
-   background-color: #F8F8F8;
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
 }
 
 table, td, th {
@@ -132,10 +141,7 @@ hr {
       page-break-after: avoid; 
    }
 }
-
 </style>
-
-
 
 
 
@@ -145,11 +151,34 @@ hr {
 <h1>Data_Products</h1>
 
 <ul>
-<li>This folder contains the files for the shiny app for courcera data science specialization</li>
+<li>This folder contains the files and explanations for the shiny &ldquo;height prediction&rdquo; app 
+for the courcera data science specialization course</li>
 <li>Also included the slidify files</li>
 </ul>
+
+<h3>Motivation of the app:</h3>
+
+<p>The R-package &ldquo;HistData&rdquo; contains the data set &ldquo;PearsonLee&rdquo; which includes the height measurements (in inches) on parents and their children, ordered by gender.
+This data set is used in the following to model (predict) the height of such a child (offspring) using the expected gender of the child, the gender of one parent (you in this case) and your height in inches.</p>
+
+<h3>Use of the app:</h3>
+
+<p>The prediction app is divided into two main folds. </p>
+
+<p>1) On the left fold you are required to specify your size in inches. If you do not know your size in inches: </p>
+
+<p>your size in inches = your size in centemeters / 2.54 </p>
+
+<p>(you can also check on the right fold, where your specifications are returned in inches and centimeters). After specifying your size, choose your gender (female/male) and the expected gender (female/male) of your &ldquo;planned&rdquo; offspring :-). All specified you can push the submit button, on order to obtain the prediction.</p>
+
+<p>2) In the right fold you get some hopefully clarifying explanations on the app and in the center your previous specifications are returned (gender and size in inches and centimeters). Please check here, if your size specifications. In the following you will obtain the predicted size of your offspring at adult age in inches and centimeters.</p>
+
+<h3>Prediction engine:</h3>
+
+<p>The app is based on a multiple linear regression model using the R &ldquo;lm&rdquo; command. Regressors are gender and size in inches, which are the two major explanatory variables within the &ldquo;PearsonLee&rdquo; data set.</p>
+
+<h1>Enjoy :-)</h1>
 
 </body>
 
 </html>
-
